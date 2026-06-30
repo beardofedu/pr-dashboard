@@ -43,3 +43,13 @@ Open `index.html` in your browser to view the dashboard.
 - `css/style.css` - Dashboard styling
 - `data/pr-metrics.yml` - PR metrics data
 - `.github/workflows/refresh-data.yml` - Daily data refresh workflow
+- `ARCHITECTURE.md` - Data collection API calls and implementation details
+
+## How It Works
+
+See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed documentation on:
+- GitHub API endpoints used to gather PR data
+- Copilot involvement detection methods
+- Data transformation and aggregation
+- Workflow implementation
+- Rate limiting and error handling
