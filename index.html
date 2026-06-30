@@ -10,7 +10,7 @@
     <div class="container">
         <header>
             <h1>📊 Pull Request Dashboard</h1>
-            <p class="subtitle">Comparing PR Closure Time With and Without Copilot Coding Agent</p>
+            <p class="subtitle">Comparing PR Closure Time by Copilot Coding Agent and Copilot Code Review Usage</p>
             <div class="last-updated" id="lastUpdated"></div>
         </header>
 
@@ -35,6 +35,26 @@
                     <div class="metric-label">Improvement</div>
                     <div class="metric-value" id="improvement">-</div>
                     <div class="metric-unit">faster with Copilot</div>
+                </div>
+
+                <div class="metric-card review-yes">
+                    <div class="metric-label">With Copilot Code Review</div>
+                    <div class="metric-value" id="avgWithCopilotReview">-</div>
+                    <div class="metric-unit">days to close</div>
+                    <div class="metric-count" id="countWithCopilotReview">-</div>
+                </div>
+
+                <div class="metric-card review-no">
+                    <div class="metric-label">Without Copilot Code Review</div>
+                    <div class="metric-value" id="avgWithoutCopilotReview">-</div>
+                    <div class="metric-unit">days to close</div>
+                    <div class="metric-count" id="countWithoutCopilotReview">-</div>
+                </div>
+
+                <div class="metric-card review-improvement">
+                    <div class="metric-label">Review Improvement</div>
+                    <div class="metric-value" id="reviewImprovement">-</div>
+                    <div class="metric-unit">faster with code review</div>
                 </div>
             </section>
 
@@ -95,6 +115,39 @@
                             <td>Total PRs</td>
                             <td id="statCountCopilot" class="copilot-stat">-</td>
                             <td id="statCountNoCopilot" class="no-copilot-stat">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 class="stats-subheader">Copilot Code Review Usage</h3>
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>With Code Review</th>
+                            <th>Without Code Review</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Average Days</td>
+                            <td id="statAvgReviewYes" class="review-yes-stat">-</td>
+                            <td id="statAvgReviewNo" class="review-no-stat">-</td>
+                        </tr>
+                        <tr>
+                            <td>Minimum Days</td>
+                            <td id="statMinReviewYes" class="review-yes-stat">-</td>
+                            <td id="statMinReviewNo" class="review-no-stat">-</td>
+                        </tr>
+                        <tr>
+                            <td>Maximum Days</td>
+                            <td id="statMaxReviewYes" class="review-yes-stat">-</td>
+                            <td id="statMaxReviewNo" class="review-no-stat">-</td>
+                        </tr>
+                        <tr>
+                            <td>Total PRs</td>
+                            <td id="statCountReviewYes" class="review-yes-stat">-</td>
+                            <td id="statCountReviewNo" class="review-no-stat">-</td>
                         </tr>
                     </tbody>
                 </table>

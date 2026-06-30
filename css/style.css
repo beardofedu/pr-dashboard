@@ -91,6 +91,18 @@ header h1 {
     border-top-color: var(--copilot-blue);
 }
 
+.metric-card.review-yes {
+    border-top-color: #0a7ea4;
+}
+
+.metric-card.review-no {
+    border-top-color: #8957e5;
+}
+
+.metric-card.review-improvement {
+    border-top-color: #6f42c1;
+}
+
 .metric-label {
     font-size: 0.9em;
     color: var(--copilot-gray);
@@ -116,6 +128,18 @@ header h1 {
 
 .metric-card.improvement .metric-value {
     color: var(--copilot-blue);
+}
+
+.metric-card.review-yes .metric-value {
+    color: #0a7ea4;
+}
+
+.metric-card.review-no .metric-value {
+    color: #8957e5;
+}
+
+.metric-card.review-improvement .metric-value {
+    color: #6f42c1;
 }
 
 .metric-unit {
@@ -228,6 +252,7 @@ canvas {
     color: var(--copilot-gray);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 8px;
 }
 
@@ -242,6 +267,25 @@ canvas {
 
 .pr-item-no-copilot .pr-item-days {
     color: #d1444a;
+}
+
+.pr-review-badge {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 0.75em;
+    font-weight: 600;
+}
+
+.pr-review-badge.review-yes {
+    background: rgba(10, 126, 164, 0.12);
+    color: #0a7ea4;
+}
+
+.pr-review-badge.review-no {
+    background: rgba(137, 87, 229, 0.12);
+    color: #8957e5;
 }
 
 /* Statistics Section */
@@ -293,6 +337,22 @@ canvas {
 .no-copilot-stat {
     color: #d1444a;
     font-weight: 600;
+}
+
+.review-yes-stat {
+    color: #0a7ea4;
+    font-weight: 600;
+}
+
+.review-no-stat {
+    color: #8957e5;
+    font-weight: 600;
+}
+
+.stats-subheader {
+    margin: 30px 0 15px;
+    font-size: 1.1em;
+    color: #24292f;
 }
 
 /* Footer */

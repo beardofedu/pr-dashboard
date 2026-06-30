@@ -4,7 +4,7 @@ This document describes the API calls and data collection strategy for the PR Da
 
 ## Overview
 
-The PR Dashboard gathers pull request metrics from GitHub repositories and determines whether each PR involved the Copilot coding agent. The data is aggregated into a YAML format for visualization.
+The PR Dashboard gathers pull request metrics from GitHub repositories and determines whether each PR involved the Copilot coding agent and whether Copilot code review was used. The data is aggregated into a YAML format for visualization.
 
 ## Data Collection Strategy
 
@@ -33,7 +33,7 @@ curl -H "Authorization: token YOUR_TOKEN" \
 - `user.login` - PR author
 - `repository_url` - Source repository
 
-### 2. Detect Copilot Involvement
+### 2. Detect Copilot Coding-Agent Involvement
 
 **Method 1: PR Labels**
 
@@ -63,7 +63,31 @@ GET /repos/{owner}/{repo}/actions/runs?event=pull_request
 
 Look for workflow names or steps that indicate Copilot agent execution.
 
-### 3. Calculate Days to Close
+### 3. Detect Copilot Code Review Usage
+
+**Method 1: Pull Request Reviews**
+
+Check whether Copilot submitted a review on the PR:
+```
+GET /repos/{owner}/{repo}/pulls/{pr_number}/reviews
+```
+
+Indicators:
+- `user.login` identifies a Copilot review identity
+- `body` includes Copilot code review phrasing
+
+**Method 2: Pull Request Review Comments**
+
+Inspect review comments for Copilot markers:
+```
+GET /repos/{owner}/{repo}/pulls/{pr_number}/comments
+```
+
+Indicators:
+- Comment author maps to Copilot
+- Comment metadata or body references Copilot review automation
+
+### 4. Calculate Days to Close
 
 ```
 days_to_close = (closed_at - created_at) / 86400000
@@ -96,14 +120,15 @@ for REPO in "${REPOS[@]}"; do
   gh pr list -R "owner/$REPO" \
     --state closed \
     --limit 100 \
-    --json number,title,author,createdAt,closedAt,labels \
+    --json number,title,author,createdAt,closedAt,labels,reviews \
     --template '{{range .}}{{.number}}\t{{.title}}\t{{.createdAt}}\t{{.closedAt}}{{"\n"}}{{end}}'
 done
 ```
 
 **3. Process Data**
 - Parse PR metadata
-- Determine Copilot involvement from labels/commits
+- Determine Copilot coding-agent involvement from labels/commits
+- Determine Copilot code-review usage from PR reviews/comments
 - Calculate days to close
 - Generate YAML output
 
@@ -129,7 +154,7 @@ The workflow uses `gh` CLI for efficient API interactions:
 ### List Closed PRs
 ```bash
 gh pr list -R owner/repo --state closed --limit 100 \
-  --json number,title,author,createdAt,closedAt,labels
+  --json number,title,author,createdAt,closedAt,labels,reviews
 ```
 
 ### Get PR Details
@@ -141,6 +166,16 @@ gh pr view {pr_number} -R owner/repo \
 ### Check Commit History
 ```bash
 gh pr view {pr_number} -R owner/repo --json commits
+```
+
+### Get PR Reviews
+```bash
+gh api repos/owner/repo/pulls/{pr_number}/reviews
+```
+
+### Get PR Review Comments
+```bash
+gh api repos/owner/repo/pulls/{pr_number}/comments
 ```
 
 ### Search for Copilot References
@@ -163,6 +198,7 @@ pull_requests:
     repository: "repo-name"
     title: "PR title"
     with_copilot: true/false
+    copilot_code_review_used: true/false
     days_to_close: 1.2
     date_opened: "YYYY-MM-DD"
     date_closed: "YYYY-MM-DD"
@@ -179,7 +215,18 @@ metrics:
     min_days: 2.6
     max_days: 4.6
     total_prs: 24
+  with_copilot_review:
+    average_days: 2.22
+    min_days: 0.9
+    max_days: 3.9
+    total_prs: 22
+  without_copilot_review:
+    average_days: 2.86
+    min_days: 0.8
+    max_days: 4.6
+    total_prs: 25
   improvement_percentage: 53.6
+  review_improvement_percentage: 22.4
 ```
 
 ## Authentication

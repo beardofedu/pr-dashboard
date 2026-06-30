@@ -3,9 +3,11 @@
 
 last_updated: "2024-12-30T09:00:00Z"
 summary:
-  total_prs: 48
+  total_prs: 47
   with_copilot: 24
-  without_copilot: 24
+  without_copilot: 23
+  with_copilot_review: 22
+  without_copilot_review: 25
 
 pull_requests:
   # PRs with Copilot coding agent
@@ -13,6 +15,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Add user authentication module"
     with_copilot: true
+    copilot_code_review_used: true
     days_to_close: 1.2
     date_opened: "2024-12-25"
     date_closed: "2024-12-26"
@@ -22,6 +25,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Fix API response formatting"
     with_copilot: true
+    copilot_code_review_used: false
     days_to_close: 0.8
     date_opened: "2024-12-26"
     date_closed: "2024-12-27"
@@ -31,6 +35,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Implement data caching layer"
     with_copilot: true
+    copilot_code_review_used: true
     days_to_close: 2.1
     date_opened: "2024-12-24"
     date_closed: "2024-12-26"
@@ -40,6 +45,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Add error handling for edge cases"
     with_copilot: true
+    copilot_code_review_used: true
     days_to_close: 1.5
     date_opened: "2024-12-25"
     date_closed: "2024-12-27"
@@ -49,6 +55,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Refactor database queries"
     with_copilot: true
+    copilot_code_review_used: false
     days_to_close: 1.9
     date_opened: "2024-12-23"
     date_closed: "2024-12-25"
@@ -58,6 +65,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Add unit tests for auth module"
     with_copilot: true
+    copilot_code_review_used: true
     days_to_close: 1.1
     date_opened: "2024-12-26"
     date_closed: "2024-12-27"
@@ -67,6 +75,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Implement webhook support"
     with_copilot: true
+    copilot_code_review_used: true
     days_to_close: 2.3
     date_opened: "2024-12-24"
     date_closed: "2024-12-26"
@@ -76,6 +85,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Add rate limiting to API"
     with_copilot: true
+    copilot_code_review_used: false
     days_to_close: 1.4
     date_opened: "2024-12-25"
     date_closed: "2024-12-27"
@@ -85,6 +95,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Create migration scripts"
     with_copilot: true
+    copilot_code_review_used: true
     days_to_close: 1.8
     date_opened: "2024-12-23"
     date_closed: "2024-12-25"
@@ -94,6 +105,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Update dependencies"
     with_copilot: true
+    copilot_code_review_used: true
     days_to_close: 0.9
     date_opened: "2024-12-27"
     date_closed: "2024-12-28"
@@ -103,6 +115,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Add logging infrastructure"
     with_copilot: true
+    copilot_code_review_used: false
     days_to_close: 1.6
     date_opened: "2024-12-24"
     date_closed: "2024-12-26"
@@ -112,6 +125,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Implement search functionality"
     with_copilot: true
+    copilot_code_review_used: true
     days_to_close: 2.2
     date_opened: "2024-12-22"
     date_closed: "2024-12-24"
@@ -121,6 +135,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Add export to CSV feature"
     with_copilot: true
+    copilot_code_review_used: true
     days_to_close: 1.3
     date_opened: "2024-12-25"
     date_closed: "2024-12-27"
@@ -130,6 +145,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Fix memory leak in event handler"
     with_copilot: true
+    copilot_code_review_used: false
     days_to_close: 1.0
     date_opened: "2024-12-27"
     date_closed: "2024-12-28"
@@ -139,6 +155,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Create admin dashboard"
     with_copilot: true
+    copilot_code_review_used: true
     days_to_close: 2.7
     date_opened: "2024-12-21"
     date_closed: "2024-12-24"
@@ -148,6 +165,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Add two-factor authentication"
     with_copilot: true
+    copilot_code_review_used: true
     days_to_close: 1.7
     date_opened: "2024-12-24"
     date_closed: "2024-12-26"
@@ -157,6 +175,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Optimize image loading"
     with_copilot: true
+    copilot_code_review_used: false
     days_to_close: 1.4
     date_opened: "2024-12-26"
     date_closed: "2024-12-28"
@@ -166,6 +185,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Add dark mode support"
     with_copilot: true
+    copilot_code_review_used: true
     days_to_close: 2.0
     date_opened: "2024-12-23"
     date_closed: "2024-12-25"
@@ -175,6 +195,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Implement notifications"
     with_copilot: true
+    copilot_code_review_used: true
     days_to_close: 1.9
     date_opened: "2024-12-24"
     date_closed: "2024-12-26"
@@ -184,6 +205,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Create API documentation"
     with_copilot: true
+    copilot_code_review_used: false
     days_to_close: 1.5
     date_opened: "2024-12-25"
     date_closed: "2024-12-27"
@@ -193,6 +215,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Fix timezone handling"
     with_copilot: true
+    copilot_code_review_used: true
     days_to_close: 1.1
     date_opened: "2024-12-27"
     date_closed: "2024-12-28"
@@ -202,6 +225,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Add batch processing"
     with_copilot: true
+    copilot_code_review_used: true
     days_to_close: 2.4
     date_opened: "2024-12-22"
     date_closed: "2024-12-25"
@@ -211,6 +235,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Implement push notifications"
     with_copilot: true
+    copilot_code_review_used: false
     days_to_close: 1.8
     date_opened: "2024-12-25"
     date_closed: "2024-12-27"
@@ -220,6 +245,7 @@ pull_requests:
     repository: "copilot-example"
     title: "Add SSL certificate pinning"
     with_copilot: true
+    copilot_code_review_used: true
     days_to_close: 1.6
     date_opened: "2024-12-24"
     date_closed: "2024-12-26"
@@ -230,6 +256,7 @@ pull_requests:
     repository: "manual-example"
     title: "Update documentation"
     with_copilot: false
+    copilot_code_review_used: true
     days_to_close: 3.2
     date_opened: "2024-12-23"
     date_closed: "2024-12-26"
@@ -239,6 +266,7 @@ pull_requests:
     repository: "manual-example"
     title: "Fix critical bug in production"
     with_copilot: false
+    copilot_code_review_used: false
     days_to_close: 2.8
     date_opened: "2024-12-25"
     date_closed: "2024-12-28"
@@ -248,6 +276,7 @@ pull_requests:
     repository: "manual-example"
     title: "Refactor legacy component"
     with_copilot: false
+    copilot_code_review_used: false
     days_to_close: 4.1
     date_opened: "2024-12-21"
     date_closed: "2024-12-25"
@@ -257,6 +286,7 @@ pull_requests:
     repository: "manual-example"
     title: "Add new API endpoint"
     with_copilot: false
+    copilot_code_review_used: false
     days_to_close: 3.5
     date_opened: "2024-12-23"
     date_closed: "2024-12-27"
@@ -266,6 +296,7 @@ pull_requests:
     repository: "manual-example"
     title: "Update package versions"
     with_copilot: false
+    copilot_code_review_used: true
     days_to_close: 2.9
     date_opened: "2024-12-24"
     date_closed: "2024-12-27"
@@ -275,6 +306,7 @@ pull_requests:
     repository: "manual-example"
     title: "Implement new authentication flow"
     with_copilot: false
+    copilot_code_review_used: false
     days_to_close: 4.3
     date_opened: "2024-12-20"
     date_closed: "2024-12-24"
@@ -284,6 +316,7 @@ pull_requests:
     repository: "manual-example"
     title: "Add integration tests"
     with_copilot: false
+    copilot_code_review_used: false
     days_to_close: 3.7
     date_opened: "2024-12-22"
     date_closed: "2024-12-26"
@@ -293,6 +326,7 @@ pull_requests:
     repository: "manual-example"
     title: "Fix database connection pool"
     with_copilot: false
+    copilot_code_review_used: false
     days_to_close: 3.1
     date_opened: "2024-12-24"
     date_closed: "2024-12-27"
@@ -302,6 +336,7 @@ pull_requests:
     repository: "manual-example"
     title: "Update UI components"
     with_copilot: false
+    copilot_code_review_used: true
     days_to_close: 3.8
     date_opened: "2024-12-21"
     date_closed: "2024-12-25"
@@ -311,6 +346,7 @@ pull_requests:
     repository: "manual-example"
     title: "Migrate to new framework"
     with_copilot: false
+    copilot_code_review_used: false
     days_to_close: 4.6
     date_opened: "2024-12-19"
     date_closed: "2024-12-24"
@@ -320,6 +356,7 @@ pull_requests:
     repository: "manual-example"
     title: "Add caching layer"
     with_copilot: false
+    copilot_code_review_used: false
     days_to_close: 3.4
     date_opened: "2024-12-23"
     date_closed: "2024-12-27"
@@ -329,6 +366,7 @@ pull_requests:
     repository: "manual-example"
     title: "Update security policies"
     with_copilot: false
+    copilot_code_review_used: false
     days_to_close: 2.7
     date_opened: "2024-12-25"
     date_closed: "2024-12-28"
@@ -338,6 +376,7 @@ pull_requests:
     repository: "manual-example"
     title: "Refactor API routes"
     with_copilot: false
+    copilot_code_review_used: true
     days_to_close: 3.9
     date_opened: "2024-12-22"
     date_closed: "2024-12-26"
@@ -347,6 +386,7 @@ pull_requests:
     repository: "manual-example"
     title: "Add monitoring dashboard"
     with_copilot: false
+    copilot_code_review_used: false
     days_to_close: 4.2
     date_opened: "2024-12-21"
     date_closed: "2024-12-25"
@@ -356,6 +396,7 @@ pull_requests:
     repository: "manual-example"
     title: "Fix performance regression"
     with_copilot: false
+    copilot_code_review_used: false
     days_to_close: 3.0
     date_opened: "2024-12-24"
     date_closed: "2024-12-27"
@@ -365,6 +406,7 @@ pull_requests:
     repository: "manual-example"
     title: "Update error handling"
     with_copilot: false
+    copilot_code_review_used: false
     days_to_close: 3.3
     date_opened: "2024-12-23"
     date_closed: "2024-12-27"
@@ -374,6 +416,7 @@ pull_requests:
     repository: "manual-example"
     title: "Add feature flags"
     with_copilot: false
+    copilot_code_review_used: true
     days_to_close: 3.6
     date_opened: "2024-12-22"
     date_closed: "2024-12-26"
@@ -383,6 +426,7 @@ pull_requests:
     repository: "manual-example"
     title: "Migrate database schema"
     with_copilot: false
+    copilot_code_review_used: false
     days_to_close: 4.4
     date_opened: "2024-12-20"
     date_closed: "2024-12-25"
@@ -392,6 +436,7 @@ pull_requests:
     repository: "manual-example"
     title: "Update deployment scripts"
     with_copilot: false
+    copilot_code_review_used: false
     days_to_close: 2.6
     date_opened: "2024-12-26"
     date_closed: "2024-12-29"
@@ -401,6 +446,7 @@ pull_requests:
     repository: "manual-example"
     title: "Add batch deletion feature"
     with_copilot: false
+    copilot_code_review_used: false
     days_to_close: 3.5
     date_opened: "2024-12-23"
     date_closed: "2024-12-27"
@@ -410,6 +456,7 @@ pull_requests:
     repository: "manual-example"
     title: "Fix cross-browser compatibility"
     with_copilot: false
+    copilot_code_review_used: true
     days_to_close: 3.7
     date_opened: "2024-12-21"
     date_closed: "2024-12-25"
@@ -419,6 +466,7 @@ pull_requests:
     repository: "manual-example"
     title: "Update CI/CD pipeline"
     with_copilot: false
+    copilot_code_review_used: false
     days_to_close: 3.2
     date_opened: "2024-12-24"
     date_closed: "2024-12-28"
@@ -428,6 +476,7 @@ pull_requests:
     repository: "manual-example"
     title: "Add rate limiting"
     with_copilot: false
+    copilot_code_review_used: false
     days_to_close: 3.8
     date_opened: "2024-12-22"
     date_closed: "2024-12-26"
@@ -435,13 +484,24 @@ pull_requests:
 
 metrics:
   with_copilot:
-    average_days: 1.66
+    average_days: 1.63
     min_days: 0.8
     max_days: 2.7
     total_prs: 24
   without_copilot:
-    average_days: 3.58
+    average_days: 3.54
     min_days: 2.6
     max_days: 4.6
-    total_prs: 24
-  improvement_percentage: 53.6
+    total_prs: 23
+  with_copilot_review:
+    average_days: 2.22
+    min_days: 0.9
+    max_days: 3.9
+    total_prs: 22
+  without_copilot_review:
+    average_days: 2.86
+    min_days: 0.8
+    max_days: 4.6
+    total_prs: 25
+  improvement_percentage: 53.8
+  review_improvement_percentage: 22.4

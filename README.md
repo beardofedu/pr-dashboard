@@ -1,6 +1,6 @@
 # PR Dashboard
 
-A GitHub Pages dashboard that visualizes pull request metrics, comparing time-to-close with and without Copilot coding agent involvement.
+A GitHub Pages dashboard that visualizes pull request metrics, comparing time-to-close by Copilot coding agent involvement and Copilot code review usage.
 
 ## Overview
 
@@ -8,6 +8,8 @@ This dashboard automatically pulls PR metrics from a YAML data file every mornin
 
 - **Average time to close PRs** with Copilot coding agent involvement
 - **Average time to close PRs** without Copilot coding agent involvement
+- **Average time to close PRs** with Copilot code review
+- **Average time to close PRs** without Copilot code review
 - **Performance metrics** comparing both approaches
 - **Trend analysis** over time
 
@@ -20,6 +22,7 @@ pull_requests:
   - number: 1
     repository: repo-name
     with_copilot: true
+    copilot_code_review_used: true
     days_to_close: 2.5
     date_closed: "2024-01-15"
 ```
@@ -49,7 +52,7 @@ Open `index.html` in your browser to view the dashboard.
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed documentation on:
 - GitHub API endpoints used to gather PR data
-- Copilot involvement detection methods
+- Copilot coding-agent and code-review detection methods
 - Data transformation and aggregation
 - Workflow implementation
 - Rate limiting and error handling
