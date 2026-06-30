@@ -231,27 +231,27 @@ metrics:
 
 ## Authentication
 
-The GitHub Actions workflow uses the built-in `GITHUB_TOKEN`:
+The workflow authenticates with a repository secret:
 
 ```yaml
-permissions:
-  contents: write
-  pull-requests: read
-
 env:
-  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GH_TOKEN: ${{ secrets.PR_DASHBOARD_TOKEN }}
 ```
 
-For local development or external integrations, use a Personal Access Token:
+### Repository setup steps
+
+1. Create a Personal Access Token (classic) with `repo` scope.
+2. Add it to the repository as secret `PR_DASHBOARD_TOKEN`.
+3. (Optional) Add `PR_DASHBOARD_REPOS` as a repository variable with comma-separated `owner/repo` entries.
+
+If `PR_DASHBOARD_TOKEN` is missing, the workflow exits with an explicit error.
+
+For local development:
 
 ```bash
 export GH_TOKEN="ghp_..."
-gh auth login --with-token < token.txt
+node scripts/generate-metrics.mjs
 ```
-
-**Required Scopes**:
-- `repo` - Full access to repositories
-- `read:org` - Read organization data
 
 ## Rate Limiting
 

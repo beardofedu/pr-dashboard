@@ -35,6 +35,21 @@ The dashboard is deployed to GitHub Pages and accessible at: `https://beardofedu
 
 A GitHub Actions workflow runs daily at 9am UTC to refresh the data. You can trigger manual runs by calling the workflow endpoint.
 
+### Configure GitHub repository secret
+
+The refresh workflow requires a repository secret named `PR_DASHBOARD_TOKEN`.
+
+1. Create a GitHub Personal Access Token (classic) with at least:
+   - `repo` scope (read PRs and write back updated metrics file)
+2. In `beardofedu/pr-dashboard`, open:
+   - **Settings** → **Secrets and variables** → **Actions** → **New repository secret**
+3. Name: `PR_DASHBOARD_TOKEN`
+4. Value: your token
+5. (Optional) Add repository variable `PR_DASHBOARD_REPOS` with a comma-separated list of repos to analyze, for example:
+   - `beardofedu/pr-dashboard,beardofedu/edgar-example`
+
+If `PR_DASHBOARD_REPOS` is not set, the workflow uses the current repository only.
+
 ## Local Development
 
 Open `index.html` in your browser to view the dashboard.
@@ -45,6 +60,7 @@ Open `index.html` in your browser to view the dashboard.
 - `js/dashboard.js` - Dashboard logic and visualization
 - `css/style.css` - Dashboard styling
 - `data/pr-metrics.yml` - PR metrics data
+- `scripts/generate-metrics.mjs` - GitHub API collector that regenerates metrics YAML
 - `.github/workflows/refresh-data.yml` - Daily data refresh workflow
 - `ARCHITECTURE.md` - Data collection API calls and implementation details
 

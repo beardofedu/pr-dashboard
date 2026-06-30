@@ -3,36 +3,45 @@ name: Refresh PR Metrics
 on:
   schedule:
     # Run at 9am UTC daily
-    - cron: '0 9 * * *'
+    - cron: "0 9 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
+  pull-requests: read
 
 jobs:
   refresh-metrics:
     runs-on: ubuntu-latest
+    env:
+      # Comma-separated list of repositories in owner/name format.
+      # If unset, defaults to this repository.
+      MONITORED_REPOS: ${{ vars.PR_DASHBOARD_REPOS }}
+      GH_TOKEN: ${{ secrets.PR_DASHBOARD_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
-      - name: Update metrics timestamp
+      - name: Ensure required secret exists
         run: |
-          # This is a placeholder that demonstrates the workflow
-          # In production, this would fetch data from your PR tracking system
-          # and update the data/pr-metrics.yml file
-          
-          TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-          echo "Updated timestamp: $TIMESTAMP"
-          
-          # Uncomment and modify the following to update the YAML file:
-          # sed -i "s/last_updated: .*/last_updated: \"$TIMESTAMP\"/" data/pr-metrics.yml
+          if [ -z "${GH_TOKEN}" ]; then
+            echo "Missing required repository secret: PR_DASHBOARD_TOKEN"
+            echo "Add it in Settings > Secrets and variables > Actions > Secrets."
+            exit 1
+          fi
 
-      - name: Commit changes
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate metrics data
+        run: node scripts/generate-metrics.mjs
+
+      - name: Commit and push updates
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          
-          # Check if there are changes to commit
+
           if git diff --quiet; then
             echo "No changes to commit"
           else
