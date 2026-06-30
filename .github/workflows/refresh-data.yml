@@ -1,0 +1,42 @@
+name: Refresh PR Metrics
+
+on:
+  schedule:
+    # Run at 9am UTC daily
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update metrics timestamp
+        run: |
+          # This is a placeholder that demonstrates the workflow
+          # In production, this would fetch data from your PR tracking system
+          # and update the data/pr-metrics.yml file
+          
+          TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          echo "Updated timestamp: $TIMESTAMP"
+          
+          # Uncomment and modify the following to update the YAML file:
+          # sed -i "s/last_updated: .*/last_updated: \"$TIMESTAMP\"/" data/pr-metrics.yml
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          # Check if there are changes to commit
+          if git diff --quiet; then
+            echo "No changes to commit"
+          else
+            git add data/pr-metrics.yml
+            git commit -m "chore: update PR metrics - $(date -u +%Y-%m-%d)"
+            git push
+          fi

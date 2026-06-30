@@ -1,0 +1,447 @@
+# Pull Request Metrics Data
+# This file is automatically updated daily at 9am UTC
+
+last_updated: "2024-12-30T09:00:00Z"
+summary:
+  total_prs: 48
+  with_copilot: 24
+  without_copilot: 24
+
+pull_requests:
+  # PRs with Copilot coding agent
+  - number: 245
+    repository: "copilot-example"
+    title: "Add user authentication module"
+    with_copilot: true
+    days_to_close: 1.2
+    date_opened: "2024-12-25"
+    date_closed: "2024-12-26"
+    author: "alice"
+    
+  - number: 246
+    repository: "copilot-example"
+    title: "Fix API response formatting"
+    with_copilot: true
+    days_to_close: 0.8
+    date_opened: "2024-12-26"
+    date_closed: "2024-12-27"
+    author: "bob"
+    
+  - number: 247
+    repository: "copilot-example"
+    title: "Implement data caching layer"
+    with_copilot: true
+    days_to_close: 2.1
+    date_opened: "2024-12-24"
+    date_closed: "2024-12-26"
+    author: "carol"
+    
+  - number: 248
+    repository: "copilot-example"
+    title: "Add error handling for edge cases"
+    with_copilot: true
+    days_to_close: 1.5
+    date_opened: "2024-12-25"
+    date_closed: "2024-12-27"
+    author: "david"
+    
+  - number: 249
+    repository: "copilot-example"
+    title: "Refactor database queries"
+    with_copilot: true
+    days_to_close: 1.9
+    date_opened: "2024-12-23"
+    date_closed: "2024-12-25"
+    author: "alice"
+    
+  - number: 250
+    repository: "copilot-example"
+    title: "Add unit tests for auth module"
+    with_copilot: true
+    days_to_close: 1.1
+    date_opened: "2024-12-26"
+    date_closed: "2024-12-27"
+    author: "eve"
+    
+  - number: 251
+    repository: "copilot-example"
+    title: "Implement webhook support"
+    with_copilot: true
+    days_to_close: 2.3
+    date_opened: "2024-12-24"
+    date_closed: "2024-12-26"
+    author: "frank"
+    
+  - number: 252
+    repository: "copilot-example"
+    title: "Add rate limiting to API"
+    with_copilot: true
+    days_to_close: 1.4
+    date_opened: "2024-12-25"
+    date_closed: "2024-12-27"
+    author: "grace"
+    
+  - number: 253
+    repository: "copilot-example"
+    title: "Create migration scripts"
+    with_copilot: true
+    days_to_close: 1.8
+    date_opened: "2024-12-23"
+    date_closed: "2024-12-25"
+    author: "henry"
+    
+  - number: 254
+    repository: "copilot-example"
+    title: "Update dependencies"
+    with_copilot: true
+    days_to_close: 0.9
+    date_opened: "2024-12-27"
+    date_closed: "2024-12-28"
+    author: "iris"
+    
+  - number: 255
+    repository: "copilot-example"
+    title: "Add logging infrastructure"
+    with_copilot: true
+    days_to_close: 1.6
+    date_opened: "2024-12-24"
+    date_closed: "2024-12-26"
+    author: "jack"
+    
+  - number: 256
+    repository: "copilot-example"
+    title: "Implement search functionality"
+    with_copilot: true
+    days_to_close: 2.2
+    date_opened: "2024-12-22"
+    date_closed: "2024-12-24"
+    author: "karen"
+    
+  - number: 257
+    repository: "copilot-example"
+    title: "Add export to CSV feature"
+    with_copilot: true
+    days_to_close: 1.3
+    date_opened: "2024-12-25"
+    date_closed: "2024-12-27"
+    author: "liam"
+    
+  - number: 258
+    repository: "copilot-example"
+    title: "Fix memory leak in event handler"
+    with_copilot: true
+    days_to_close: 1.0
+    date_opened: "2024-12-27"
+    date_closed: "2024-12-28"
+    author: "mira"
+    
+  - number: 259
+    repository: "copilot-example"
+    title: "Create admin dashboard"
+    with_copilot: true
+    days_to_close: 2.7
+    date_opened: "2024-12-21"
+    date_closed: "2024-12-24"
+    author: "noah"
+    
+  - number: 260
+    repository: "copilot-example"
+    title: "Add two-factor authentication"
+    with_copilot: true
+    days_to_close: 1.7
+    date_opened: "2024-12-24"
+    date_closed: "2024-12-26"
+    author: "olivia"
+    
+  - number: 261
+    repository: "copilot-example"
+    title: "Optimize image loading"
+    with_copilot: true
+    days_to_close: 1.4
+    date_opened: "2024-12-26"
+    date_closed: "2024-12-28"
+    author: "paul"
+    
+  - number: 262
+    repository: "copilot-example"
+    title: "Add dark mode support"
+    with_copilot: true
+    days_to_close: 2.0
+    date_opened: "2024-12-23"
+    date_closed: "2024-12-25"
+    author: "quinn"
+    
+  - number: 263
+    repository: "copilot-example"
+    title: "Implement notifications"
+    with_copilot: true
+    days_to_close: 1.9
+    date_opened: "2024-12-24"
+    date_closed: "2024-12-26"
+    author: "rachel"
+    
+  - number: 264
+    repository: "copilot-example"
+    title: "Create API documentation"
+    with_copilot: true
+    days_to_close: 1.5
+    date_opened: "2024-12-25"
+    date_closed: "2024-12-27"
+    author: "sam"
+    
+  - number: 265
+    repository: "copilot-example"
+    title: "Fix timezone handling"
+    with_copilot: true
+    days_to_close: 1.1
+    date_opened: "2024-12-27"
+    date_closed: "2024-12-28"
+    author: "tara"
+    
+  - number: 266
+    repository: "copilot-example"
+    title: "Add batch processing"
+    with_copilot: true
+    days_to_close: 2.4
+    date_opened: "2024-12-22"
+    date_closed: "2024-12-25"
+    author: "ulysses"
+    
+  - number: 267
+    repository: "copilot-example"
+    title: "Implement push notifications"
+    with_copilot: true
+    days_to_close: 1.8
+    date_opened: "2024-12-25"
+    date_closed: "2024-12-27"
+    author: "vera"
+    
+  - number: 268
+    repository: "copilot-example"
+    title: "Add SSL certificate pinning"
+    with_copilot: true
+    days_to_close: 1.6
+    date_opened: "2024-12-24"
+    date_closed: "2024-12-26"
+    author: "walter"
+
+  # PRs without Copilot coding agent
+  - number: 300
+    repository: "manual-example"
+    title: "Update documentation"
+    with_copilot: false
+    days_to_close: 3.2
+    date_opened: "2024-12-23"
+    date_closed: "2024-12-26"
+    author: "alice"
+    
+  - number: 301
+    repository: "manual-example"
+    title: "Fix critical bug in production"
+    with_copilot: false
+    days_to_close: 2.8
+    date_opened: "2024-12-25"
+    date_closed: "2024-12-28"
+    author: "bob"
+    
+  - number: 302
+    repository: "manual-example"
+    title: "Refactor legacy component"
+    with_copilot: false
+    days_to_close: 4.1
+    date_opened: "2024-12-21"
+    date_closed: "2024-12-25"
+    author: "carol"
+    
+  - number: 303
+    repository: "manual-example"
+    title: "Add new API endpoint"
+    with_copilot: false
+    days_to_close: 3.5
+    date_opened: "2024-12-23"
+    date_closed: "2024-12-27"
+    author: "david"
+    
+  - number: 304
+    repository: "manual-example"
+    title: "Update package versions"
+    with_copilot: false
+    days_to_close: 2.9
+    date_opened: "2024-12-24"
+    date_closed: "2024-12-27"
+    author: "eve"
+    
+  - number: 305
+    repository: "manual-example"
+    title: "Implement new authentication flow"
+    with_copilot: false
+    days_to_close: 4.3
+    date_opened: "2024-12-20"
+    date_closed: "2024-12-24"
+    author: "frank"
+    
+  - number: 306
+    repository: "manual-example"
+    title: "Add integration tests"
+    with_copilot: false
+    days_to_close: 3.7
+    date_opened: "2024-12-22"
+    date_closed: "2024-12-26"
+    author: "grace"
+    
+  - number: 307
+    repository: "manual-example"
+    title: "Fix database connection pool"
+    with_copilot: false
+    days_to_close: 3.1
+    date_opened: "2024-12-24"
+    date_closed: "2024-12-27"
+    author: "henry"
+    
+  - number: 308
+    repository: "manual-example"
+    title: "Update UI components"
+    with_copilot: false
+    days_to_close: 3.8
+    date_opened: "2024-12-21"
+    date_closed: "2024-12-25"
+    author: "iris"
+    
+  - number: 309
+    repository: "manual-example"
+    title: "Migrate to new framework"
+    with_copilot: false
+    days_to_close: 4.6
+    date_opened: "2024-12-19"
+    date_closed: "2024-12-24"
+    author: "jack"
+    
+  - number: 310
+    repository: "manual-example"
+    title: "Add caching layer"
+    with_copilot: false
+    days_to_close: 3.4
+    date_opened: "2024-12-23"
+    date_closed: "2024-12-27"
+    author: "karen"
+    
+  - number: 311
+    repository: "manual-example"
+    title: "Update security policies"
+    with_copilot: false
+    days_to_close: 2.7
+    date_opened: "2024-12-25"
+    date_closed: "2024-12-28"
+    author: "liam"
+    
+  - number: 312
+    repository: "manual-example"
+    title: "Refactor API routes"
+    with_copilot: false
+    days_to_close: 3.9
+    date_opened: "2024-12-22"
+    date_closed: "2024-12-26"
+    author: "mira"
+    
+  - number: 313
+    repository: "manual-example"
+    title: "Add monitoring dashboard"
+    with_copilot: false
+    days_to_close: 4.2
+    date_opened: "2024-12-21"
+    date_closed: "2024-12-25"
+    author: "noah"
+    
+  - number: 314
+    repository: "manual-example"
+    title: "Fix performance regression"
+    with_copilot: false
+    days_to_close: 3.0
+    date_opened: "2024-12-24"
+    date_closed: "2024-12-27"
+    author: "olivia"
+    
+  - number: 315
+    repository: "manual-example"
+    title: "Update error handling"
+    with_copilot: false
+    days_to_close: 3.3
+    date_opened: "2024-12-23"
+    date_closed: "2024-12-27"
+    author: "paul"
+    
+  - number: 316
+    repository: "manual-example"
+    title: "Add feature flags"
+    with_copilot: false
+    days_to_close: 3.6
+    date_opened: "2024-12-22"
+    date_closed: "2024-12-26"
+    author: "quinn"
+    
+  - number: 317
+    repository: "manual-example"
+    title: "Migrate database schema"
+    with_copilot: false
+    days_to_close: 4.4
+    date_opened: "2024-12-20"
+    date_closed: "2024-12-25"
+    author: "rachel"
+    
+  - number: 318
+    repository: "manual-example"
+    title: "Update deployment scripts"
+    with_copilot: false
+    days_to_close: 2.6
+    date_opened: "2024-12-26"
+    date_closed: "2024-12-29"
+    author: "sam"
+    
+  - number: 319
+    repository: "manual-example"
+    title: "Add batch deletion feature"
+    with_copilot: false
+    days_to_close: 3.5
+    date_opened: "2024-12-23"
+    date_closed: "2024-12-27"
+    author: "tara"
+    
+  - number: 320
+    repository: "manual-example"
+    title: "Fix cross-browser compatibility"
+    with_copilot: false
+    days_to_close: 3.7
+    date_opened: "2024-12-21"
+    date_closed: "2024-12-25"
+    author: "ulysses"
+    
+  - number: 321
+    repository: "manual-example"
+    title: "Update CI/CD pipeline"
+    with_copilot: false
+    days_to_close: 3.2
+    date_opened: "2024-12-24"
+    date_closed: "2024-12-28"
+    author: "vera"
+    
+  - number: 322
+    repository: "manual-example"
+    title: "Add rate limiting"
+    with_copilot: false
+    days_to_close: 3.8
+    date_opened: "2024-12-22"
+    date_closed: "2024-12-26"
+    author: "walter"
+
+metrics:
+  with_copilot:
+    average_days: 1.66
+    min_days: 0.8
+    max_days: 2.7
+    total_prs: 24
+  without_copilot:
+    average_days: 3.58
+    min_days: 2.6
+    max_days: 4.6
+    total_prs: 24
+  improvement_percentage: 53.6

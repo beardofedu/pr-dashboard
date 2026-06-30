@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR Dashboard - Copilot Metrics</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Pull Request Dashboard</h1>
+            <p class="subtitle">Comparing PR Closure Time With and Without Copilot Coding Agent</p>
+            <div class="last-updated" id="lastUpdated"></div>
+        </header>
+
+        <main>
+            <!-- Key Metrics -->
+            <section class="metrics-grid">
+                <div class="metric-card copilot">
+                    <div class="metric-label">With Copilot</div>
+                    <div class="metric-value" id="avgWithCopilot">-</div>
+                    <div class="metric-unit">days to close</div>
+                    <div class="metric-count" id="countWithCopilot">-</div>
+                </div>
+
+                <div class="metric-card without">
+                    <div class="metric-label">Without Copilot</div>
+                    <div class="metric-value" id="avgWithoutCopilot">-</div>
+                    <div class="metric-unit">days to close</div>
+                    <div class="metric-count" id="countWithoutCopilot">-</div>
+                </div>
+
+                <div class="metric-card improvement">
+                    <div class="metric-label">Improvement</div>
+                    <div class="metric-value" id="improvement">-</div>
+                    <div class="metric-unit">faster with Copilot</div>
+                </div>
+            </section>
+
+            <!-- Charts Section -->
+            <section class="charts-section">
+                <div class="chart-container">
+                    <h2>Average Days to Close</h2>
+                    <canvas id="comparisonChart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <h2>Distribution by Days</h2>
+                    <canvas id="distributionChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Detailed PR Lists -->
+            <section class="pr-lists">
+                <div class="pr-list-container">
+                    <h2>🚀 PRs with Copilot (Fastest)</h2>
+                    <div id="prListCopilot" class="pr-list"></div>
+                </div>
+
+                <div class="pr-list-container">
+                    <h2>📝 PRs without Copilot (Standard)</h2>
+                    <div id="prListNoCopilot" class="pr-list"></div>
+                </div>
+            </section>
+
+            <!-- Statistics -->
+            <section class="stats-section">
+                <h2>📈 Detailed Statistics</h2>
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>With Copilot</th>
+                            <th>Without Copilot</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Average Days</td>
+                            <td id="statAvgCopilot" class="copilot-stat">-</td>
+                            <td id="statAvgNoCopilot" class="no-copilot-stat">-</td>
+                        </tr>
+                        <tr>
+                            <td>Minimum Days</td>
+                            <td id="statMinCopilot" class="copilot-stat">-</td>
+                            <td id="statMinNoCopilot" class="no-copilot-stat">-</td>
+                        </tr>
+                        <tr>
+                            <td>Maximum Days</td>
+                            <td id="statMaxCopilot" class="copilot-stat">-</td>
+                            <td id="statMaxNoCopilot" class="no-copilot-stat">-</td>
+                        </tr>
+                        <tr>
+                            <td>Total PRs</td>
+                            <td id="statCountCopilot" class="copilot-stat">-</td>
+                            <td id="statCountNoCopilot" class="no-copilot-stat">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer>
+            <p>Data is automatically refreshed daily at 9am UTC</p>
+            <p>Source: <code>data/pr-metrics.yml</code></p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
